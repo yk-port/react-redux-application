@@ -1,9 +1,30 @@
 import React from 'react';
-import './App.css';
 
-function App() {
+const App = () => {
+  const profiles = [
+    { id: 1, name: 'taro', age: 20 },
+    { id: 2, name: 'hanako', age: 25 },
+  ];
+
   return (
-    <div className="App">
+    <div>
+      {
+        profiles.map(profile => (
+          <User
+            key={profile.id}
+            name={profile.name}
+            age={profile.age}
+          />
+        ))
+      }
+    </div>
+  )
+}
+
+const User = ({ name, age }) => {
+  return (
+    <div>
+      I'm {name} and {age} years old.
     </div>
   );
 }
