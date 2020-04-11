@@ -8,7 +8,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './index.css';
 import reducer from './reducers';
 import EventsIndex from './components/EventsIndex';
-// import EventsNew from './components/EventsNew';
+import EventsNew from './components/EventsNew';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
@@ -17,7 +17,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={EventsIndex} />
-        {/* <Route exact path="/events/new" component={EventsNew} /> */}
+        <Route exact path="/events/new" component={EventsNew} />
       </Switch>
     </BrowserRouter>
   </Provider>,
