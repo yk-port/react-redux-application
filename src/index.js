@@ -21,9 +21,10 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
         <Route exact path="/events/new" component={EventsNew} />
-        <Route exact path="/events/:id" component={EventsShow} />
-        <Route path="/" component={EventsIndex} />
-        <Route path="/events" component={EventsIndex} />
+        <Route path="/events/new" component={EventsNew} />
+        <Route path="/events/:id" component={EventsShow} />
+        <Route exact path="/" component={EventsIndex} />
+        <Route exact path="/events" component={EventsIndex} />
       </Switch>
     </BrowserRouter>
   </Provider>,
